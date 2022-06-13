@@ -8,8 +8,9 @@ import 'package:moscow_hack/utils/layout.dart';
 class CustomAppBar extends SliverPersistentHeaderDelegate {
   final String title;
   final double rating;
+  final int place;
 
-  CustomAppBar(this.title, this.rating);
+  CustomAppBar(this.title, this.rating, this.place);
 
   @override
   Widget build(BuildContext context, double shrinkOffset, bool overlapsContent) {
@@ -68,7 +69,7 @@ class CustomAppBar extends SliverPersistentHeaderDelegate {
             child: AnimatedOpacity(
               opacity: visible,
               duration: AppLayout.defaultDuration,
-              child: const Text('#4 в Москве'),
+              child: const Text('#2 в Москве'),
             ),
           )
         ],

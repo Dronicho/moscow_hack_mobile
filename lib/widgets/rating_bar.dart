@@ -20,7 +20,7 @@ class RatingBar extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text('РЕЙТИНГ', style: style),
-            Text('$value', style: style),
+            Text(value.toStringAsPrecision(2), style: style),
           ],
         )
       ],

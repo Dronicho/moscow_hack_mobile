@@ -23,7 +23,7 @@ class RatingScreen extends StatelessWidgetWithBlocs {
           headerSliverBuilder: (context, innerBoxIsScrolled) {
             return [
               SliverPersistentHeader(
-                delegate: CustomAppBar('РЕЙТИНГ', get<UserRepository>().currentUser.rating),
+                delegate: CustomAppBar('РЕЙТИНГ', get<UserRepository>().currentUser.rating,context.read<RatingCubit>().state.maybeMap(orElse: () => 2, loaded: (s) => s.ratings.firstWhere((element) => element.isClient).place) ),
                 pinned: true,
               ),
               SliverPadding(padding: AppLayout.defaultPadding()),

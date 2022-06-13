@@ -40,10 +40,10 @@ class ProjectsView extends StatelessWidgetWithBlocs {
                                   snap: true,
                                   snapSizes: const [0.6],
                                   builder: (_, scrollController) => BlocProvider.value(
-                                        value: context.read<NkoFilterCubit>(),
+                                        value: context.read<ProjectFilterCubit>(),
                                         child: MediaQuery(
                                           data: MediaQuery.of(context),
-                                          child: BlocBuilder<NkoFilterCubit, FilterState>(
+                                          child: BlocBuilder<ProjectFilterCubit, FilterState>(
                                             builder: (context, state) {
                                               return state.map(
                                                   initial: (_) => const SizedBox(),
