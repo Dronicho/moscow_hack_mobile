@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:moscow_hack/domain/app_bootstrapper.dart';
 import 'package:moscow_hack/domain/services/modal_service.dart';
 import 'package:moscow_hack/modules/filter/cubit/filter_cubit.dart';
+import 'package:moscow_hack/modules/filter/domain/models/filter_payload.dart';
 import 'package:moscow_hack/modules/filter/widgets/filter_modal.dart';
 import 'package:moscow_hack/modules/nko/nko_list.dart';
 import 'package:moscow_hack/modules/nko/nkos_cubit/nkos_cubit.dart';
@@ -61,7 +62,7 @@ class NkosScreen extends StatelessWidgetWithBlocs {
                                                                     style: context.textTheme.titleMedium
                                                                         ?.copyWith(fontWeight: FontWeight.bold)),
                                                                 const SizedBox(height: 4.0),
-                                                                FilterCard(description: e),
+                                                                FilterCard<NkoFilterCubit>(description: e),
                                                               ],
                                                             ),
                                                           );

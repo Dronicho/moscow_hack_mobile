@@ -61,7 +61,7 @@ class ProjectsView extends StatelessWidgetWithBlocs {
                                                                     style: context.textTheme.titleMedium
                                                                         ?.copyWith(fontWeight: FontWeight.bold)),
                                                                 const SizedBox(height: 4.0),
-                                                                FilterCard(description: e),
+                                                                FilterCard<ProjectFilterCubit>(description: e),
                                                               ],
                                                             ),
                                                           );
